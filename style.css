@@ -576,6 +576,38 @@ h4,
     border-left: 4px solid var(--primary);
 }
 
+/* Case Study Layout */
+.case-study {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.case-item {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.case-item strong {
+    color: var(--text-main);
+}
+
+.case-item.impact {
+    background: rgba(79, 70, 229, 0.08);
+    padding: 0.8rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
+}
+
+.hero-qualifier {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--primary);
+    opacity: 0.8;
+}
+
 .project-tech {
     display: flex;
     flex-wrap: wrap;
@@ -618,7 +650,7 @@ h4,
     font-size: 0.8rem;
 }
 
-/* Workshops & Achievements */
+/* Projects Section */
 .workshops-list {
     display: grid;
     gap: 2rem;
