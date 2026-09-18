@@ -1,22 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Cursor Glow Effect
-    const cursorGlow = document.querySelector('.cursor-glow');
-    document.addEventListener('mousemove', (e) => {
-        cursorGlow.style.left = e.clientX + 'px';
-        cursorGlow.style.top = e.clientY + 'px';
-    });
-
-    // 2. Navbar Scroll Effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
-    // 3. Reveal Animations on Scroll
+    // 1. Reveal Animations on Scroll
     const observerOptions = {
         threshold: 0.1
     };
@@ -24,38 +7,55 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('reveal-active');
-                observer.unobserve(entry.target); // Only animate once
+                const el = entry.target;
+                el.classList.remove('reveal');
+                el.classList.add('reveal-active');
+                // Remove the class after the animation so hover
+                // transitions on cards behave normally afterwards
+                setTimeout(() => el.classList.remove('reveal-active'), 900);
+                observer.unobserve(el);
             }
         });
     }, observerOptions);
 
     // Apply reveal to sections and specific elements
-    const revealElements = document.querySelectorAll('.section-title, .about-text, .stat-card, .skill-category, .project-card, .workshop-item, .achievement-card, .contact-info, .contact-form');
+    const revealElements = document.querySelectorAll('.section-head, .section-subtitle, .about-text, .about-meta, .skill-group, .project-card, .workshop-item, .achievement-card, .timeline-item, .build-card, .currently-item, .contact-info, .contact-form');
 
-    // Add reveal class to all elements initially
     revealElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+        el.classList.add('reveal');
         observer.observe(el);
     });
 
     // Add CSS for the reveal effect dynamically
     const style = document.createElement('style');
     style.textContent = `
-        .reveal-active {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
         }
-        
+
+        .reveal,
+        .reveal-active {
+            transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                        transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         /* Stagger delays for grids */
-        .skills-grid .skill-category:nth-child(2) { transition-delay: 0.1s; }
-        .skills-grid .skill-category:nth-child(3) { transition-delay: 0.2s; }
-        .skills-grid .skill-category:nth-child(4) { transition-delay: 0.3s; }
-        
-        .projects-grid .project-card:nth-child(2) { transition-delay: 0.1s; }
-        .projects-grid .project-card:nth-child(3) { transition-delay: 0.2s; }
+        .skills-grid .reveal-active:nth-child(2) { transition-delay: 0.08s; }
+        .skills-grid .reveal-active:nth-child(3) { transition-delay: 0.16s; }
+        .skills-grid .reveal-active:nth-child(4) { transition-delay: 0.24s; }
+        .skills-grid .reveal-active:nth-child(5) { transition-delay: 0.32s; }
+
+        .featured-list .reveal-active:nth-child(2) { transition-delay: 0.08s; }
+        .featured-list .reveal-active:nth-child(3) { transition-delay: 0.16s; }
+        .featured-list .reveal-active:nth-child(4) { transition-delay: 0.24s; }
+
+        .projects-grid .reveal-active:nth-child(2) { transition-delay: 0.08s; }
+        .projects-grid .reveal-active:nth-child(3) { transition-delay: 0.16s; }
+
+        .build-grid .reveal-active:nth-child(2) { transition-delay: 0.08s; }
+        .build-grid .reveal-active:nth-child(3) { transition-delay: 0.16s; }
+        .build-grid .reveal-active:nth-child(4) { transition-delay: 0.24s; }
     `;
     document.head.appendChild(style);
 
@@ -108,48 +108,20 @@ document.addEventListener('DOMContentLoaded', () => {
     let menuOpen = false;
 
     if (menuBtn) {
-        menuBtn.addEventListener('click', () => {
-            if (!menuOpen) {
-                menuBtn.classList.add('open');
-                navLinks.classList.add('open');
-                menuOpen = true;
-            } else {
-                menuBtn.classList.remove('open');
-                navLinks.classList.remove('open');
-                menuOpen = false;
-            }
-        });
+        const setMenu = (open) => {
+            menuBtn.classList.toggle('open', open);
+            navLinks.classList.toggle('open', open);
+            menuBtn.setAttribute('aria-expanded', open);
+            menuOpen = open;
+        };
+
+        menuBtn.addEventListener('click', () => setMenu(!menuOpen));
 
         // Close menu when a link is clicked
         navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menuBtn.classList.remove('open');
-                navLinks.classList.remove('open');
-                menuOpen = false;
-            });
+            link.addEventListener('click', () => setMenu(false));
         });
     }
-
-    // 7. Hero Badge dynamic text
-    const badge = document.getElementById('hero-badge');
-    const badges = [
-        'Available for ambitious projects',
-        'Top 10 Finalist @ IIT Hyderabad',
-        'Best UI Design Award Winner',
-        'Salesforce Agentblazer Legend'
-    ];
-    let badgeIndex = 0;
-
-    setInterval(() => {
-        badge.style.opacity = '0';
-        setTimeout(() => {
-            badgeIndex = (badgeIndex + 1) % badges.length;
-            badge.textContent = badges[badgeIndex];
-            badge.style.opacity = '1';
-        }, 500);
-    }, 4000);
-
-    badge.style.transition = 'opacity 0.5s ease';
 
     // 8. Back to Top Logic
     const backToTop = document.getElementById('back-to-top');

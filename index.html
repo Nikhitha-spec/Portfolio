@@ -4,35 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nikhitha Talari | Frontend & UI Developer Portfolio</title>
+    <title>Nikhitha Talari — Software Developer | AI + Full Stack</title>
     <meta name="description"
-        content="Portfolio of Nikhitha Talari, a Frontend and UI Developer specializing in AI Engineering, UI/UX, and Modern Web Systems.">
+        content="Portfolio of Nikhitha Talari, a Software Developer building full-stack applications, AI-powered tools, and polished web experiences with React, Next.js, Node.js, and Python.">
+    <link rel="canonical" href="https://portfolio-9qm2ierzq-nikhitha-talaris-projects.vercel.app/">
+    <meta name="theme-color" content="#F8F7F4">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-9qm2ierzq-nikhitha-talaris-projects.vercel.app/">
+    <meta property="og:title" content="Nikhitha Talari — Software Developer | AI + Full Stack">
+    <meta property="og:description"
+        content="Software Developer building full-stack applications, AI-powered tools, and polished web experiences.">
+    <meta property="og:image" content="https://portfolio-9qm2ierzq-nikhitha-talaris-projects.vercel.app/@.jpg">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Nikhitha Talari — Software Developer | AI + Full Stack">
+    <meta name="twitter:description"
+        content="Software Developer building full-stack applications, AI-powered tools, and polished web experiences.">
+    <meta name="twitter:image" content="https://portfolio-9qm2ierzq-nikhitha-talaris-projects.vercel.app/@.jpg">
+
+    <!-- Favicon (inline SVG, no external file needed) -->
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236C63FF'/%3E%3Ctext x='32' y='43' font-family='Arial,sans-serif' font-size='32' font-weight='bold' fill='white' text-anchor='middle'%3EN%3C/text%3E%3C/svg%3E">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,500;1,600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="cursor-glow"></div>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Main navigation">
         <div class="nav-container">
-            <a href="#" class="logo">NT<span>.</span></a>
+            <a href="#hero" class="logo">Nikhitha Talari</a>
             <div class="nav-links">
-                <a href="#about">About</a>
+                <a href="#hero">Home</a>
+                <a href="#projects">Work</a>
+                <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#workshops">Learning</a>
-                <a href="#achievements">Achievements</a>
-                <a href="#contact" class="nav-cta">Let's Talk</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
-            <div class="menu-btn">
-                <div class="menu-btn__burger"></div>
+            <div class="nav-right">
+                <!-- TODO: add resume.pdf to the repo root (or update this href) to enable the download -->
+                <a href="resume.pdf" download class="btn btn-nav">Resume</a>
+                <button class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="menu-btn__burger"></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -40,297 +65,500 @@
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
-            <div class="hero-badge" id="hero-badge">Available for ambitious projects</div>
+            <p class="hero-eyebrow">Software Developer &nbsp;•&nbsp; AI + Full Stack</p>
             <h1 class="hero-title">
-                Frontend & UI Developer focused on building <span class="gradient-text">usable, award-winning web
-                    products</span>
+                Building <em class="serif-accent">AI-powered products</em> with
+                <span class="accent">modern web technologies</span>.
             </h1>
             <p class="hero-subtext">
-                I build and ship real products — from intuitive frontends to working backends — with a strong focus on
-                UX, automation, and practical problem-solving.
-                <br>
-                <strong>Winner of a national-level UI design award.</strong>
+                I build full-stack applications, AI-powered tools, and polished digital experiences using modern web
+                technologies, APIs, databases, and AI systems.
             </p>
             <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">View Flagship Projects</a>
-                <a href="https://github.com/Nikhitha-spec" target="_blank" class="btn btn-secondary">View GitHub</a>
-                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="resume.pdf" download class="btn btn-secondary">Download Resume</a>
             </div>
-            <p class="hero-qualifier">Open to internships and entry-level frontend or UI/UX roles.</p>
+            <div class="hero-links">
+                <a href="https://github.com/Nikhitha-spec" target="_blank" rel="noopener"
+                    class="text-link">GitHub<span class="arrow">→</span></a>
+                <a href="https://www.linkedin.com/in/nikhitha-talari/" target="_blank" rel="noopener"
+                    class="text-link">LinkedIn<span class="arrow">→</span></a>
+                <a href="#contact" class="text-link">Contact Me<span class="arrow"></span></a>
+            </div>
         </div>
         <div class="hero-visual">
-            <div class="visual-blob"></div>
+            <div class="visual-blob" aria-hidden="true"></div>
             <div class="profile-img-container">
-                <img src="@.jpg" alt="Nikhitha Talari" class="profile-img">
+                <img src="@.jpg" alt="Portrait of Nikhitha Talari" class="profile-img">
             </div>
             <div class="visual-card floating">
-                <i class="fas fa-robot"></i>
-                <span>AI Engineer</span>
+                <i class="fas fa-code" aria-hidden="true"></i>
+                <span>Software Developer</span>
             </div>
             <div class="visual-card floating delay-1">
-                <i class="fas fa-code"></i>
-                <span>Frontend</span>
-            </div>
-            <div class="visual-card floating delay-2">
-                <i class="fas fa-pencil-ruler"></i>
-                <span>UI/UX Design</span>
-            </div>
-            <div class="visual-card floating delay-1" style="bottom: 50px; left: -80px; width: 160px;">
-                <i class="fab fa-salesforce"></i>
-                <span>Champion ➔ Legend</span>
+                <i class="fas fa-brain" aria-hidden="true"></i>
+                <span>AI + Full Stack</span>
             </div>
         </div>
     </section>
 
     <!-- Scroll to Top -->
-    <button id="back-to-top" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+    <button id="back-to-top" title="Go to top" aria-label="Back to top"><i class="fas fa-chevron-up"
+            aria-hidden="true"></i></button>
 
-    <!-- About Me -->
-    <section id="about" class="section">
+    <!-- Projects -->
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p class="highlight">I’m a Computer Science undergraduate passionate about building real-world
-                        digital systems using web technologies and AI.</p>
-                    <p>I specialize in frontend development, UI/UX design, and AI engineering, with hands-on experience
-                        building intelligent systems, automation workflows, and user-centric web platforms.</p>
-                    <p>I actively participate in hackathons and competitive tech events, winning the <strong>Best UI
-                            Design Award</strong> and ranking <strong>Top 10</strong> at IIT Hyderabad’s Dcode
-                        Hackathon.</p>
-                    <p>I enjoy converting complex requirements into elegant, high-impact products. My primary
-                        interests lie in frontend architecture, applied AI, and user experience engineering.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>Best UI</h3>
-                        <p>Award Winner</p>
+            <div class="section-head">
+                <span class="section-label"><span class="accent">01</span> / Selected Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-sub">Selected projects across web, full-stack and AI.</p>
+            </div>
+            <div class="featured-list">
+                <!-- Project 1: YoLearn Campus -->
+                <article class="project-card featured">
+                    <div class="project-media">
+                        <!-- TODO: add a real screenshot, e.g. <img src="images/yolearn.png" alt="YoLearn Campus screenshot" loading="lazy"> -->
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                     </div>
-                    <div class="stat-card">
-                        <h3>Top 10</h3>
-                        <p>IIT Hyderabad</p>
+                    <div class="project-content">
+                        <span class="project-num">01</span>
+                        <h3>YoLearn Campus</h3>
+                        <p class="project-status">Best UI Design Award — Hack Beyond Limits</p>
+                        <p class="project-desc">Peer-to-peer skill exchange platform built as a full-stack MERN
+                            application. Developed RESTful APIs, backend CRUD operations, and MongoDB schemas.</p>
+                        <p class="project-tech">React · Node.js · Express · MongoDB</p>
+                        <div class="project-links">
+                            <a href="https://yo-learn-campus-pjh47dsdv-nikhitha-talaris-projects.vercel.app/"
+                                target="_blank" rel="noopener" class="project-link">Live Demo<span
+                                    class="arrow">→</span></a>
+                            <a href="https://github.com/Nikhitha-spec/YoLearn-Campus" target="_blank" rel="noopener"
+                                class="project-link">GitHub<span class="arrow">→</span></a>
+                        </div>
                     </div>
-                    <div class="stat-card">
-                        <h3>Legend</h3>
-                        <p>Salesforce Agentblazer</p>
+                </article>
+
+                <!-- Project 2: AccidentSense -->
+                <article class="project-card featured">
+                    <div class="project-media">
+                        <!-- TODO: add a real screenshot, e.g. <img src="images/accidentsense.png" alt="AccidentSense screenshot" loading="lazy"> -->
+                        <i class="fas fa-car-burst" aria-hidden="true"></i>
                     </div>
+                    <div class="project-content">
+                        <span class="project-num">02</span>
+                        <h3>AccidentSense</h3>
+                        <p class="project-status">Working prototype</p>
+                        <p class="project-desc">AI-powered prototype that detects accident scenarios and triggers
+                            hospital alert workflows to reduce emergency response delays.</p>
+                        <p class="project-tech">React · Firebase · Automation</p>
+                        <div class="project-links">
+                            <a href="https://accident-sense.vercel.app/" target="_blank" rel="noopener"
+                                class="project-link">Live Demo<span class="arrow">→</span></a>
+                            <a href="https://github.com/Nikhitha-spec/AccidentSense" target="_blank" rel="noopener"
+                                class="project-link">GitHub<span class="arrow">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: MusicChamps -->
+                <article class="project-card featured">
+                    <div class="project-media">
+                        <!-- TODO: add a real screenshot, e.g. <img src="images/musicchamps.png" alt="MusicChamps screenshot" loading="lazy"> -->
+                        <i class="fas fa-music" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-num">03</span>
+                        <h3>MusicChamps</h3>
+                        <p class="project-status">AI-powered · Built at TwoTheta</p>
+                        <p class="project-desc">AI-powered platform for music performance analysis — audio, video, and
+                            live performance analysis with automatic instrument detection, performance scoring, and
+                            detailed reports.</p>
+                        <p class="project-tech">Next.js · TypeScript · PostgreSQL · Vertex AI</p>
+                        <div class="project-links">
+                            <!-- PLACEHOLDER: add the MusicChamps live demo URL -->
+                            <a href="#" class="project-link">Live Demo<span class="arrow">→</span></a>
+                            <!-- PLACEHOLDER: add the MusicChamps repository URL -->
+                            <a href="#" class="project-link">GitHub<span class="arrow">→</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Reflecta -->
+                <article class="project-card featured">
+                    <div class="project-media">
+                        <!-- TODO: add a real screenshot, e.g. <img src="images/reflecta.png" alt="Reflecta screenshot" loading="lazy"> -->
+                        <i class="fas fa-book-open" aria-hidden="true"></i>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-num">04</span>
+                        <h3>Reflecta</h3>
+                        <p class="project-status">Deployed</p>
+                        <p class="project-desc">Journaling and goal-tracking web app with a clean, distraction-free
+                            interface and persistent data storage.</p>
+                        <p class="project-tech">Next.js · Tailwind CSS</p>
+                        <div class="project-links">
+                            <a href="https://reflecta-37lg.vercel.app/" target="_blank" rel="noopener"
+                                class="project-link">Live Demo<span class="arrow">→</span></a>
+                            <a href="https://github.com/Nikhitha-spec/Reflecta" target="_blank" rel="noopener"
+                                class="project-link">GitHub<span class="arrow">→</span></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-label"><span class="accent">02</span> / Experience</span>
+                <h2 class="section-title">Experience</h2>
+                <p class="section-sub">Where I'm working now.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <span class="exp-date">May 2026 — Present · Hyderabad, India</span>
+                    <h3>Software Developer Intern</h3>
+                    <p class="exp-company">Two Theta</p>
+                    <ul class="exp-bullets">
+                        <li>Designed and developed MusicChamps, a web application for analyzing music and generating
+                            detailed reports.</li>
+                        <li>Independently built the complete web application and user-facing experience using Next.js,
+                            PostgreSQL, HTML, CSS, and JavaScript.</li>
+                        <li>Took ownership of the application's development, implementation, and UI across the
+                            project.</li>
+                        <li>Worked on building and improving a practical, user-focused product as part of the software
+                            engineering team.</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="section bg-light">
+    <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <div class="section-head">
+                <span class="section-label"><span class="accent">03</span> / Skills</span>
+                <h2 class="section-title">Skills</h2>
+                <p class="section-sub">Technologies I use to build products.</p>
+            </div>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="category-title"><i class="fas fa-laptop-code"></i> Frontend</h3>
+                <div class="skill-group">
+                    <h3 class="skill-label">Languages</h3>
                     <div class="skill-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
+                        <span>Python</span>
                         <span>JavaScript</span>
+                        <span>TypeScript</span>
+                        <span>C++</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-label">Frontend</h3>
+                    <div class="skill-tags">
                         <span>React</span>
+                        <span>Next.js</span>
+                        <span>JavaScript</span>
+                        <span>TypeScript</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
                         <span>Tailwind CSS</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3 class="category-title"><i class="fas fa-server"></i> Backend</h3>
+                <div class="skill-group">
+                    <h3 class="skill-label">Backend</h3>
                     <div class="skill-tags">
                         <span>Node.js</span>
-                        <span>MySQL</span>
-                        <span>MongoDB</span>
+                        <span>Express.js</span>
+                        <span>REST APIs</span>
                         <span>Firebase</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3 class="category-title"><i class="fas fa-brain"></i> AI & Automation</h3>
+                <div class="skill-group">
+                    <h3 class="skill-label">Databases</h3>
                     <div class="skill-tags">
-                        <span>Salesforce Agentblazer</span>
+                        <span>PostgreSQL</span>
+                        <span>MySQL</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-label">AI</h3>
+                    <div class="skill-tags">
+                        <span>Generative AI</span>
+                        <span>RAG</span>
+                        <span>Vertex AI</span>
                         <span>OpenAI API</span>
-                        <span>Hugging Face</span>
                         <span>MCP</span>
+                        <span>Hugging Face</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-label">Tools</h3>
+                    <div class="skill-tags">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Docker</span>
+                        <span>Vite</span>
+                        <span>Vercel</span>
+                        <span>VS Code</span>
+                        <span>Cursor IDE</span>
                         <span>Make.com</span>
                         <span>Pipedream</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3 class="category-title"><i class="fas fa-tools"></i> Tools & Platforms</h3>
-                    <div class="skill-tags">
-                        <span>Git</span>
-                        <span>GitHub</span>
-                        <span>VS Code</span>
-                        <span>Cursor IDE</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section id="achievements" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-label"><span class="accent">04</span> / Recognition</span>
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-sub">Recognition from hackathons and programs.</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-trophy" aria-hidden="true"></i>
+                    <div class="ach-text">
+                        <h4>Best UI Design Award</h4>
+                        <p>Won at Hack Beyond Limits for building YoLearn Campus, focused on engaging user experience.
+                        </p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-medal" aria-hidden="true"></i>
+                    <div class="ach-text">
+                        <h4>Top 10 Finalist — D-Code 2.0</h4>
+                        <p>Ranked among top teams at IIT Hyderabad's national level hackathon.</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <i class="fab fa-salesforce" aria-hidden="true"></i>
+                    <div class="ach-text">
+                        <h4>Salesforce Agentblazer Legend</h4>
+                        <p>Achieved Champion, Innovator, and Legend ranks in AI agents and automation.</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-rocket" aria-hidden="true"></i>
+                    <div class="ach-text">
+                        <h4>GDG TechSprint — Top Team</h4>
+                        <p>Selected among top-performing teams for building PathForge, an AI career-path generator.</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-brain" aria-hidden="true"></i>
+                    <div class="ach-text">
+                        <h4>Gen AI Exchange Hackathon</h4>
+                        <p>Qualified for Round 2 of the Google Gen AI Exchange Hackathon.</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <div class="ach-text">
+                        <h4>250+ DSA Problems</h4>
+                        <p>Solved 250+ data structures and algorithms problems on LeetCode.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
+    <!-- What I Can Build -->
+    <section id="build" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="section-head">
+                <span class="section-label"><span class="accent">05</span> / Services</span>
+                <h2 class="section-title">What I Can Build</h2>
+                <p class="section-sub">Ways I can help with your next project.</p>
+            </div>
+            <div class="build-grid">
+                <a href="#contact" class="build-card">
+                    <span class="build-num">01</span>
+                    <h3>Websites</h3>
+                    <p>Modern responsive websites for businesses, creators, organizations and personal brands.</p>
+                    <span class="build-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="#contact" class="build-card">
+                    <span class="build-num">02</span>
+                    <h3>Web Applications</h3>
+                    <p>Dashboards, portals and full-stack applications.</p>
+                    <span class="build-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="#contact" class="build-card">
+                    <span class="build-num">03</span>
+                    <h3>AI Applications</h3>
+                    <p>AI-powered tools, assistants, automation and intelligent workflows.</p>
+                    <span class="build-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="#contact" class="build-card">
+                    <span class="build-num">04</span>
+                    <h3>Automation</h3>
+                    <p>AI and API-based workflows that reduce repetitive manual work.</p>
+                    <span class="build-arrow" aria-hidden="true">→</span>
+                </a>
+            </div>
+            <p class="build-cta">Have a project in mind? <a href="#contact" class="text-link">Let's build it<span
+                        class="arrow">→</span></a></p>
+        </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-label"><span class="accent">06</span> / Leadership</span>
+                <h2 class="section-title">Leadership</h2>
+                <p class="section-sub">Building teams, not just projects.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <span class="exp-date">2 years · 1 year as Captain</span>
+                    <h3>Team Agastya</h3>
+                    <p class="exp-company">Student Tech Club — Captain</p>
+                    <ul class="exp-bullets">
+                        <li>Helped develop the club during its early stage, growing it into an active student
+                            community.</li>
+                        <li>Mentored junior members on projects and technical skills.</li>
+                        <li>Organized and contributed to project expos, quizzes, debates, student competitions, and
+                            donation drives.</li>
+                        <li>Led the transition and handover of responsibilities to the next team.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="section-head about-head">
+                    <span class="section-label"><span class="accent">07</span> / About</span>
+                    <h2 class="section-title">About Me</h2>
+                </div>
+                <div class="about-text">
+                    <p class="highlight">I'm a Computer Science student (B.Tech CSE, graduating 2027) and Software
+                        Developer Intern at Two Theta, focused on building practical products across full-stack
+                        development and AI.</p>
+                    <p>I enjoy taking an idea from a rough requirement to a working application — designing the
+                        interface, building APIs, integrating databases, and connecting AI capabilities where they
+                        make sense. At Two Theta I independently built MusicChamps, an AI-powered music analysis
+                        platform.</p>
+                    <p>Outside of work, I've shipped projects like YoLearn Campus, competed in national hackathons
+                        (Top 10 at IIT Hyderabad's D-Code 2.0), and spent two years helping build Team Agastya —
+                        including a year leading it.</p>
+                    <ul class="about-meta">
+                        <li>Based in Hyderabad</li>
+                        <li>B.Tech CSE — CMRIT</li>
+                        <li>Graduating 2027 · CGPA 8.89</li>
+                        <li>AI + Full Stack</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currently -->
+    <section id="currently" class="section section-strip">
+        <div class="container">
+            <div class="currently-grid">
+                <div class="currently-item">
+                    <h4>Software Development</h4>
+                    <p>Working as a Software Developer Intern and gaining real-world development experience.</p>
+                </div>
+                <div class="currently-item">
+                    <h4>AI Engineering</h4>
+                    <p>Exploring AI applications, RAG, automation and intelligent workflows.</p>
+                </div>
+                <div class="currently-item">
+                    <h4>Independent Projects</h4>
+                    <p>Building practical web products and exploring client-ready development work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Projects -->
+    <section id="other-projects" class="section">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-label">More Work</span>
+                <h2 class="section-title">Other Projects</h2>
+            </div>
             <div class="projects-grid">
-                <!-- Project 1: YoLearn Campus (FLAGSHIP) -->
-                <article class="project-card flagship">
-                    <div class="project-badge flagship-badge"><i class="fas fa-crown"></i></div>
+                <article class="project-card">
                     <div class="project-content">
-                        <h3>YoLearn Campus</h3>
-                        <p class="project-desc">A gamified education platform built to improve navigation clarity and
-                            student engagement.</p>
-
-                        <div class="case-study">
-                            <div class="case-item"><strong>Role:</strong> Frontend Developer — UI/UX, interaction logic,
-                                integration</div>
-                            <div class="case-item"><strong>Problem:</strong> Students struggle with disengaging,
-                                cluttered educational platforms that reduce motivation and usability.</div>
-                            <div class="case-item"><strong>Solution:</strong> Built a gamified education platform with
-                                intuitive navigation and interaction-driven UI to improve engagement and ease of use.
-                            </div>
-                            <div class="case-item impact"><strong>Impact:</strong> 🏆 Won Best UI Design at a
-                                national-level hackathon for usability, clarity, and user-centric flow.</div>
-                        </div>
-
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>UI Toolkit</span>
-                            <span>UX Engineering</span>
-                        </div>
-                        <a href="https://yo-learn-campus-pjh47dsdv-nikhitha-talaris-projects.vercel.app/"
-                            target="_blank" class="project-link">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                        <h3>ComplianceGPT</h3>
+                        <p class="project-status">In development</p>
+                        <p class="project-desc">AI-powered compliance pre-review system that checks marketing content
+                            against a versioned knowledge base, flags issues with cited sources, and suggests compliant
+                            rewrites using RAG-based grounding and rule checks.</p>
+                        <p class="project-tech">RAG · REST APIs · AI</p>
                     </div>
                 </article>
 
-                <!-- Project 2: AccidentSense (FLAGSHIP) -->
-                <article class="project-card flagship">
-                    <div class="project-badge flagship-badge"><i class="fas fa-star"></i></div>
+                <article class="project-card">
                     <div class="project-content">
-                        <h3>AccidentSense</h3>
-                        <p class="project-desc">An AI-powered system designed to detect accident scenarios and
-                            automatically trigger hospital alerts.</p>
-
-                        <div class="case-study">
-                            <div class="case-item"><strong>Role:</strong> Frontend Developer — UI/UX, interaction flow,
-                                logic</div>
-                            <div class="case-item"><strong>Problem:</strong> Emergency response delays occur due to
-                                manual accident reporting and slow notification pipelines.</div>
-                            <div class="case-item"><strong>Solution:</strong> Developed an AI-powered system that
-                                detects accident scenarios and automatically triggers hospital alerts.</div>
-                            <div class="case-item impact"><strong>Impact:</strong> 🚑 Validated prototype demonstrating
-                                reduced emergency notification delay during simulated scenarios.</div>
+                        <h3>DocVault</h3>
+                        <p class="project-status">Full-stack</p>
+                        <p class="project-desc">Secure role-based document management platform with access control,
+                            file and folder management, authentication, search, and RESTful APIs.</p>
+                        <p class="project-tech">React · Node.js · Express · PostgreSQL</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Nikhitha-spec/DocVault" target="_blank" rel="noopener"
+                                class="project-link">GitHub<span class="arrow">→</span></a>
                         </div>
-
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Firebase</span>
-                            <span>Automation</span>
-                        </div>
-                        <a href="https://accident-sense.vercel.app/" target="_blank" class="project-link">Live Demo <i
-                                class="fas fa-external-link-alt"></i></a>
                     </div>
                 </article>
 
-                <!-- Project 3: PathForge -->
                 <article class="project-card">
                     <div class="project-content">
                         <h3>PathForge</h3>
-                        <p class="project-desc">Guided career-path generation platform that dynamically suggests
-                            personalized learning tracks.</p>
-
-                        <div class="case-study">
-                            <div class="case-item"><strong>Role:</strong> Backend & API Developer</div>
-                            <div class="case-item"><strong>Problem:</strong> Learners lack clarity on structured,
-                                personalized career progression paths.</div>
-                            <div class="case-item"><strong>Solution:</strong> Built a guided career-path platform that
-                                dynamically recommends learning tracks based on user goals.</div>
-                            <div class="case-item impact"><strong>Impact:</strong> ⭐ Selected among top-performing teams
-                                at TechSprint Hackathon.</div>
-                        </div>
-
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>API Integration</span>
+                        <p class="project-status">GDG TechSprint — Top Team</p>
+                        <p class="project-desc">Career-path generator that recommends personalized learning tracks
+                            based on user goals.</p>
+                        <p class="project-tech">React · Node.js · API Integration</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Nikhitha-spec/PathForge" target="_blank" rel="noopener"
+                                class="project-link">GitHub<span class="arrow">→</span></a>
                         </div>
                     </div>
                 </article>
 
-                <!-- Project 4: Chat-Champion -->
                 <article class="project-card">
                     <div class="project-content">
                         <h3>Chat-Champion</h3>
-                        <p class="project-desc">Multi-domain AI chatbot system for automations and intelligent query
-                            routing.</p>
-
-                        <div class="case-study">
-                            <div class="case-item"><strong>Role:</strong> AI Engineer & Backend Developer</div>
-                            <div class="case-item"><strong>Problem:</strong> High volume of varied user queries
-                                requiring manual sorting and delayed responses.</div>
-                            <div class="case-item"><strong>Solution:</strong> Automated multi-domain query handling
-                                using intelligent routing and conversational workflows.</div>
-                            <div class="case-item impact"><strong>Impact:</strong> 🤖 Improved response turnaround and
-                                reduced manual intervention in simulated production environments.</div>
+                        <p class="project-status">AI chatbot</p>
+                        <p class="project-desc">Multi-domain AI chatbot that automates query handling and routes
+                            conversations intelligently.</p>
+                        <p class="project-tech">OpenAI API · Node.js · Automation</p>
+                        <div class="project-links">
+                            <a href="https://ai-assistant6660.lovable.app" target="_blank" rel="noopener"
+                                class="project-link">Live Demo<span class="arrow">→</span></a>
+                            <a href="https://github.com/Nikhitha-spec/chat-companion" target="_blank" rel="noopener"
+                                class="project-link">GitHub<span class="arrow">→</span></a>
                         </div>
-
-                        <div class="project-tech">
-                            <span>OpenAI API</span>
-                            <span>Node.js</span>
-                            <span>Automation</span>
-                        </div>
-                        <a href="https://ai-assistant6660.lovable.app" target="_blank" class="project-link">Live Demo <i
-                                class="fas fa-external-link-alt"></i></a>
                     </div>
                 </article>
 
-                <!-- Project 5: Reflecta -->
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3>Reflecta</h3>
-                        <p class="project-desc">A modern journaling and goal-tracking tool built with a polished user
-                            experience.</p>
-
-                        <div class="case-study">
-                            <div class="case-item"><strong>Role:</strong> Frontend Developer & UI Designer</div>
-                            <div class="case-item"><strong>Problem:</strong> Fragmented tools for goal tracking and
-                                reflection often lead to low user retention and distraction.</div>
-                            <div class="case-item"><strong>Solution:</strong> Built a unified journaling tool with
-                                persistent data storage and a distraction-free UX.</div>
-                            <div class="case-item impact"><strong>Impact:</strong> ✨ Developed a production-ready
-                                interface with optimized data persistence layers.</div>
-                        </div>
-
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>Tailwind CSS</span>
-                            <span>Cloud Analytics</span>
-                        </div>
-                        <a href="https://reflecta-37lg.vercel.app/" target="_blank" class="project-link">Live Demo <i
-                                class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </article>
-
-                <!-- Project 6: Blood Bank Management -->
                 <article class="project-card">
                     <div class="project-content">
                         <h3>Blood Bank Management</h3>
-                        <p class="project-desc">A CRUD-based blood bank management system featuring inventory tracking.
-                        </p>
-
-                        <div class="case-study">
-                            <div class="case-item"><strong>Role:</strong> Backend Developer (Database Design)</div>
-                            <div class="case-item"><strong>Problem:</strong> Manual tracking of blood inventory leading
-                                to data inconsistencies and critical supply errors.</div>
-                            <div class="case-item"><strong>Solution:</strong> Developed a strict validation CRUD system
-                                with inventory tracking and error handling.</div>
-                            <div class="case-item impact"><strong>Impact:</strong> 🩸 Optimized operational efficiency
-                                and reduced data entry errors in pilot testing.</div>
-                        </div>
-
-                        <div class="project-tech">
-                            <span>Java</span>
-                            <span>JDBC</span>
-                            <span>MySQL</span>
+                        <p class="project-status">CRUD system</p>
+                        <p class="project-desc">Blood bank system with inventory tracking, validation, and
+                            error handling.</p>
+                        <p class="project-tech">Java · JDBC · MySQL</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Nikhitha-spec/Blood-Bank-Management-system" target="_blank"
+                                rel="noopener" class="project-link">GitHub<span class="arrow">→</span></a>
                         </div>
                     </div>
                 </article>
@@ -338,21 +566,24 @@
         </div>
     </section>
 
-    <!-- Workshops -->
-    <section id="workshops" class="section bg-light">
+    <!-- Certifications & Learning -->
+    <section id="learning" class="section section-sm">
         <div class="container">
-            <h2 class="section-title">Specialized Learning</h2>
+            <div class="section-head">
+                <span class="section-label">Learning</span>
+                <h2 class="section-title">Certifications &amp; Learning</h2>
+            </div>
             <div class="workshops-list">
                 <div class="workshop-item">
-                    <div class="workshop-icon"><i class="fas fa-gears"></i></div>
+                    <div class="workshop-icon"><i class="fas fa-gears" aria-hidden="true"></i></div>
                     <div class="workshop-details">
-                        <h4>AI Workflows & Automation Workshop</h4>
+                        <h4>AI Workflows &amp; Automation Workshop</h4>
                         <p>Built end-to-end automation workflows integrating AI agents, APIs, MCP servers, and external
                             tools via Make.com.</p>
                     </div>
                 </div>
                 <div class="workshop-item">
-                    <div class="workshop-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="workshop-icon"><i class="fas fa-network-wired" aria-hidden="true"></i></div>
                     <div class="workshop-details">
                         <h4>MCP Mega Workshop</h4>
                         <p>Implemented AI + automation pipelines using Model Context Protocol (MCP), Cursor IDE, and
@@ -360,7 +591,7 @@
                     </div>
                 </div>
                 <div class="workshop-item">
-                    <div class="workshop-icon"><i class="fas fa-robot"></i></div>
+                    <div class="workshop-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
                     <div class="workshop-details">
                         <h4>Robotic Process Automation (RPA) Workshop</h4>
                         <p>Leveraged Automation Anywhere to design and deploy an intelligent employee onboarding task
@@ -371,79 +602,38 @@
         </div>
     </section>
 
-    <!-- Achievements -->
-    <section id="achievements" class="section">
-        <div class="container">
-            <h2 class="section-title">Achievements</h2>
-            <div class="achievements-grid">
-                <!-- 1 -->
-                <div class="achievement-card">
-                    <i class="fas fa-trophy"></i>
-                    <div class="ach-text">
-                        <h4>Best UI Design Award</h4>
-                        <p>Won at Hack Beyond Limits for building YoLearn Campus, focused on engaging user experience.
-                        </p>
-                    </div>
-                </div>
-                <!-- 2 -->
-                <div class="achievement-card">
-                    <i class="fas fa-medal"></i>
-                    <div class="ach-text">
-                        <h4>Top 10 Finalist — D-Code 2.0</h4>
-                        <p>Ranked among top teams at IIT Hyderabad's national level hackathon.</p>
-                    </div>
-                </div>
-                <!-- 3 -->
-                <div class="achievement-card">
-                    <i class="fab fa-salesforce"></i>
-                    <div class="ach-text">
-                        <h4>Salesforce Agentblazer Legend</h4>
-                        <p>Achieved Champion, Innovator, and Legend ranks in AI agents and automation.</p>
-                    </div>
-                </div>
-                <!-- 4 -->
-                <div class="achievement-card">
-                    <i class="fas fa-rocket"></i>
-                    <div class="ach-text">
-                        <h4>GDG TechSprint — Top Team</h4>
-                        <p>Selected among top-performing teams for building PathForge, an AI career-path generator.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact -->
-    <section id="contact" class="section">
+    <section id="contact" class="section contact-section">
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h2 class="section-title left">Let’s Talk</h2>
-                    <p class="cta-line">If you're building something ambitious — I'd love to hear from you.</p>
+                    <span class="section-label"><span class="accent">08</span> / Contact</span>
+                    <h2 class="contact-title">Have something worth building?</h2>
+                    <p class="cta-line">Let's turn the idea into a working product.</p>
+                    <a href="mailto:nikhithatalari27@gmail.com" class="btn btn-primary">Start a Conversation<span
+                            class="arrow">→</span></a>
                     <div class="contact-links">
-                        <a href="mailto:nikhithatalari27@gmail.com" class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>nikhithatalari27@gmail.com</span>
-                        </a>
-                        <a href="https://github.com/Nikhitha-spec" target="_blank" class="contact-item">
-                            <i class="fab fa-github"></i>
-                            <span>github.com/Nikhitha-spec</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/nikhitha-talari/" target="_blank" class="contact-item">
-                            <i class="fab fa-linkedin"></i>
-                            <span>linkedin.com/in/nikhitha-talari</span>
-                        </a>
+                        <a href="mailto:nikhithatalari27@gmail.com" class="text-link">
+                            nikhithatalari27@gmail.com</a>
+                        <a href="https://github.com/Nikhitha-spec" target="_blank" rel="noopener"
+                            class="text-link">github.com/Nikhitha-spec</a>
+                        <a href="https://www.linkedin.com/in/nikhitha-talari/" target="_blank" rel="noopener"
+                            class="text-link">linkedin.com/in/nikhitha-talari</a>
                     </div>
                 </div>
                 <form id="contact-form" class="contact-form" action="https://formspree.io/f/xlgweqvz" method="POST">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Name" required>
+                        <label for="contact-name" class="sr-only">Name</label>
+                        <input type="text" id="contact-name" name="name" placeholder="Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Email" required>
+                        <label for="contact-email" class="sr-only">Email</label>
+                        <input type="email" id="contact-email" name="email" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <label for="contact-message" class="sr-only">Your Message</label>
+                        <textarea id="contact-message" name="message" placeholder="Your Message" rows="5"
+                            required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary full-width">Send Message</button>
                 </form>
@@ -455,13 +645,19 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; <span id="year"></span> Nikhitha Talari. Built with ❤️</p>
+                <div class="footer-info">
+                    <p class="footer-name">Nikhitha Talari</p>
+                    <p class="footer-tag">Software Developer • AI + Full Stack</p>
+                </div>
                 <div class="footer-socials">
-                    <a href="https://github.com/Nikhitha-spec" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/nikhitha-talari/" target="_blank"><i
-                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Nikhitha-spec" target="_blank" rel="noopener"
+                        class="text-link">GitHub</a>
+                    <a href="https://www.linkedin.com/in/nikhitha-talari/" target="_blank" rel="noopener"
+                        class="text-link">LinkedIn</a>
+                    <a href="mailto:nikhithatalari27@gmail.com" class="text-link">Email</a>
                 </div>
             </div>
+            <p class="footer-copy">&copy; <span id="year"></span> Nikhitha Talari</p>
         </div>
     </footer>
 
